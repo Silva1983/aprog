@@ -25,7 +25,7 @@ public class Exer8 {
         n = JOptionPane.showInputDialog("Insira um nº.");
         num = Long.parseLong(n);
         
-        // num.matches("[01]+")
+        // num.matches("[01]+");
         
         while (num > 0) {
             dig = num % 10;
