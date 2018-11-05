@@ -1,0 +1,19 @@
+Ed: max, i, j : inteiro
+	impar, mult, multiplos: real
+alg
+	INICIO
+		ESCREVER("Introduza o limite máximo do intervalo")
+		LER(max)
+		PARA (i <- 1 até max passo 1) Fazer
+			SE (i mod 2 =1) Entao
+				impar <- i
+				PARA (j <- 1 até 10 passo 1) fazer
+					mult <- j * 5
+					SE (impar = mult) Entao
+						multiplos <- impar
+						ESCREVER(multiplos)
+					FIMSE
+				FIMPARA
+			FIMSE
+		FIMPARA
+	FIM

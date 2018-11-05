@@ -1,0 +1,17 @@
+Ed num, i, quant: inteiro
+	divisor: real
+
+alg
+	INICIO
+		ESCREVER("Introduza um número")
+		LER(num)
+		
+		PARA i <- 1 ATÉ num PASSO 1 FAÇA
+			divisor <- num MOD i
+			SE (divisor = 0) ENTÃO
+				quant <- quant + 1
+				ESCREVER (i," é divisor de ",num)
+			FIMSE
+		FIMPARA
+		ESCREVER("O número ",num, tem ",quant," divisores")
+	FIM

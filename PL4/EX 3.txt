@@ -1,0 +1,33 @@
+a)
+	Altera a ordem dos digitios de um número introduzido pelo utilizador, e multiplica esse valor por 2, ex:
+	se o utilizador introduzir o número 235, este número será invertido para 532 e depois multiplicado por 2,
+	logo o output seria: "Resultado = 1064"
+	
+b)
+
+Ed mult, num, num1, dig, par: inteiro
+alg
+	INICIO
+		mult <- 0
+		par <- 0
+		Repita
+			ESCREVER("Introduza um número")
+			LER (num)
+		enquanto (num <=0)
+		mult <- num MOD 3
+		par <- num mod 2
+		SE (par = 0) E (mult = 0) Então
+			ENQUANTO (num <> 0)
+				dig <- num MOD 10
+				num1 <- num1 * 10 + dig
+				num <- num DIV 10
+			FIMENQUANTO
+			ESCREVER("Resultado = ", 2 * num1)
+		SENAO
+			ESCREVER("Número inválido")
+		FIMSE
+			
+		
+	fim
+	
+	

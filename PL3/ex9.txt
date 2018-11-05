@@ -1,0 +1,43 @@
+Ed i, n:inteiro
+   a, b, c, zero1, zero2, delta, i1, i2: real
+  
+alg
+	INICIO
+		delta <- 0
+	    ESCREVER("ax^2 + bx + c = 0")
+	    ESCREVER("Quantas equações quer calcular?")
+	    LER(n)
+
+	    PARA i <- 1 até N passo 1 faça
+			ESCREVER("Introduza os coeficientes (a, b e c)")
+			LER(a, b, c)
+			delta <- ((b^2) - 4 * a * c)
+			SE (a = 0) então
+				ESCREVER("Nao é equação de SEgundo grau")
+			SENÃO
+				SE (delta > 0) Então
+					zero1 <- ((-b) + Sqroot(delta)) / (2 *a)
+					zero2 <- ((-b) - Sqroot(delta)) / (2 *a)
+					ESCREVER("A equação tem duas raízes reais em x=",zero1," e x=",zero2)
+				SENÃO
+					SE (delta = 0) Então
+						zero1 <- ((-b) + Sqroot(delta) / 2 *a)
+						escreva("A equação só tem uma raíz em x=",zero1)
+					SENÃO
+						ESCREVER("A equação não tem raízes reais")
+						ESCREVER("")
+						i1 <- RaizQ(-(delta)) / (2 *a)
+						i2 <- (-RaizQ(-(delta))) / (2 *a)
+               
+						zero1 <- ((-b) / (2 *a))
+						SE (i=1)Então
+							ESCREVER("A equação tem duas raízes imaginárias em x=",zero1,"+i e x=",zero1,"-i")
+						SENÃO
+							ESCREVER("A equação tem duas raízes imaginárias em x=",zero1,"+",i1,"i e x=",zero1,"",i2,"i")
+						FIMSE
+						ESCREVER("")
+					FIMSE
+				FIMSE
+			FIMSE
+		FIMPARA
+	FIM

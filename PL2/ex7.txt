@@ -1,0 +1,52 @@
+a)
+
+Ed: a, b, c: real
+
+Alg
+	Inicio
+		Escreva("Introduza os lados de um triangulo")
+		ler(a,b,c)
+		
+		Se (a = b) e (a = c) e (b=c) Então
+			Escrever("Triangulo equilátero!")
+		Senão
+			Se (a = b) ou (a = c) ou (b = c) Então
+				Escrever("Triangulo Isósceles!")
+			Senão
+				Se (a <> b) e (b<>c) e (a<>c) então
+					escrever("Triangulo Escaleno!")
+				fimse
+			fimse
+		fimse
+	Fim
+	
+b)																								c)		
+				
+Ed: a, b, c: real																						Traçagem
+
+Alg																										
+	Inicio																								Inicio
+		Escreva("Introduza os lados de um triangulo")														Introduza os lados de um triangulo
+		leia(a,b,c)																								3, 5, 6
+
+		Se (a <= 0) ou (b <= 0) ou (c <= 0) Então	
+			escrever("Triangulo impossível")
+			Senão
+				Se (a > b+c) ou (b > a+c) ou (c > a+ b) Então
+					Escreva("Triangualo Impossível!")
+					senao
+                    Se (a = b) e (a = c) e (b=c) Então
+				           Escreva("Triangulo equilátero!")
+                   Senão
+					         Se (a <> b) e (b<>c) e (a<>c) então
+						         escreva("Triangulo Escaleno!")
+                         senao
+                             escreva("Trinagulo Isosceles")												Triangualo Isosceles
+                         fimse
+		             fimse
+               fimse
+		fimse
+	Fim
+	
+c)
+	

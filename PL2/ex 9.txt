@@ -1,0 +1,43 @@
+Ed: hora, min, horaChegada, horaDuracao, minDuracao, durViagem, minC, minChegada :real
+	horaPartida, minPartida, horaChegadas : inteiro
+
+Alg
+	inicio
+		
+		Escreva("Introduza hora partida do comboio")
+		leia(horaPartida, minPartida)
+
+		Escreva("Introduza duraçao da viagem")
+		leia(horaDuracao, minDuracao)
+
+		//conversão das horas para minutos e cálculo da hora de chegada em minutos
+		
+		horaChegada <- (horaDuracao * 60 + minDuracao) + (horaPartida * 60 + minPartida)
+
+		//1440 o número de minutos de 1 dia
+		
+		Se (horaChegada > 1440) Entao
+			
+			//converção de minutos em horas e verificação se chegou no dia seguinte
+			
+			horaChegadas <- int (horaChegada / 60) - 24
+			horaChegada<- (horaChegada / 60) - 24
+			
+			//Cálculo dos minutos a que o comboio chegou
+			minC <- horaChegada - horaChegadas
+			minc <- int(minC * 60)
+
+
+
+			Escreva("O comboio chegou no dia seguinte às",horaChegadas,":",minC)
+			
+		Senao
+			 horaChegadas <- int(horaChegada / 60)
+			 horaChegada <- (horaChegada / 60)
+			 
+			 minC <- horaChegada - horaChegadas
+			 minC <- int(minC * 60)
+			 Escreva("O comboio chegou às ",horaChegadas,":",minC)
+		fimse
+		
+	fim

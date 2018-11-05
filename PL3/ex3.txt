@@ -1,0 +1,23 @@
+Ed: contTotal, contPar, cont3, par, soma, num: inteiro
+	media, percentagem: real
+alg
+	INICIO
+		ESCREVER("Introduza uma SEquencia de números positivos")
+		LER(num)
+		ENQUANTO (num > 0) Faça
+			contTotal <- contTotal +1
+			par <- num mod 2
+			SE (par = 0) Entao
+				contPar <- contPar +1
+				percentagem <- (contPar * 100) / contTotal
+			SENAO
+				cont3<- cont3 +1
+				soma <- soma + num
+				media <- soma / cont3
+			FIMSE
+			percentagem <- percentagem * 100
+			percentagem <- percentagem - (percentagem / 100)
+			LER(num)
+		FIMENQUANTO
+		ESCREVER("A porcentagem dos números pares é: ",percentagem," e a média dos números impares é: ",media)
+	FIM

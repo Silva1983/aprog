@@ -1,0 +1,44 @@
+Ed lim, temp, temporario,i, dig,num,x, cont,divisiveis, cont2:inteiro
+	perc, maior: real
+alg
+	INICIO
+		maior <- 0
+
+		REPETIR
+			ESCREVER("Introduza o limite máximo da SEquencia")
+			LER(lim)
+		ENQUANTO lim < 0
+
+		PARA i de 1 ATÉ lim FAÇA
+            cont <-0
+            Cont2 <- 0
+            ESCREVER("Introduza um numero")
+            LER(num)
+            temp <- num
+
+            temporario <- temp
+            
+			ENQUANTO (temp <> 0) FAÇA
+
+                dig <- temp mod 10
+                temp <- temp div 10
+                cont2 <- cont2 +1
+
+                divisiveis <- temporario mod dig
+
+                SE (divisiveis = 0) ENTÃO
+                    cont <- cont +1
+
+                FIMSE
+            FIMENQUANTO
+
+            perc <- (cont * 100)/ cont2
+
+            ESCREVER("A percentagem dos digitos divisiveis por",temporario,"é de",perc,"%")
+            SE (maior < perc) ENTÃO
+               x <- temporario
+               maior <- perc
+            FIMSE
+		FIMPARA
+		ESCREVER("A maior percentagem foi de ", maior,"% do número", x)
+	FIM

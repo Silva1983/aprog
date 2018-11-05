@@ -1,0 +1,16 @@
+Ed: nota1, nota2, nota3, peso1, peso2, peso3 Inteiro
+	mediaPesada Real
+	
+alg
+	Inicio
+		ler (nota1, nota2, nota3)
+		ler (peso1, peso2, peso3)
+		
+		mediaPesada <- (nota1 * peso1 + nota2 * peso2 + nota3 * peso3) / (peso1 + peso2 + peso3)
+		
+		Se (mediaPesada >= 8) Entao
+			Escrever ("O aluno teve nota mínima exigida com ",mediaPesada)
+		Senão
+			Escrever (mediaPesada)
+		fimse
+	fim

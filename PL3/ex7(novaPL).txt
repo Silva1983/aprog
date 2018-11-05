@@ -1,0 +1,38 @@
+Ed horas, salario, x: inteiro
+   salarioMedio, salarioTotal, total: real
+
+alg
+	INICIO
+		salarioMedio <- 0
+		salarioTotal <- 0
+	   total <- 0
+	   
+	   REPETIR
+
+		  //validação das horas extraordinárias
+		  REPETIR
+			 ESCREVER("Introduza o número de horas extraordinárias do funcionário")
+			 LER(horas)
+			 x <- x+1
+		  ENQUANTO (horas < -1)
+		  
+		  SE (horas = - 1) entao
+			 interrompa
+		  FIMSE
+		  
+		  //validação dos salários
+		  REPETIR
+			 ESCREVER("Introduza o salário baSE do funcionário")
+			 LER(salario)
+		  ENQUANTO (salario < 0)
+		  
+		  //cálculo dos salários
+		  
+		  salarioTotal <- salario + (2 / 100) * horas
+		  total <- total + salarioTotal
+		  salarioMedio <- total / x
+		  ESCREVER("O funcionário irá receber: ",salarioTotal)
+		  
+	   ENQUANTO horas <> -1
+	   ESCREVER("A empresa irá pagar uma média de: ",salarioMedio," no mês corrente")
+	FIM

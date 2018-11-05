@@ -1,0 +1,27 @@
+Ed produto, x, max, mult: inteiro
+alg
+	INICIO
+	
+	   max <- 0
+	   produto <- 0
+	   x <-1
+	   mult <- 0
+	   
+	   ESCREVER("Introduza o produto máximo acumulado")
+	   LER(produto)
+	   ESCREVER("Introduza um número")
+	   LER(x)
+	   mult <- 1
+	   ENQUANTO (mult < produto) faca
+		  mult <- mult * x
+		  ESCREVER("Produto: ",mult)
+		  SE (mult < produto)Entao
+			 LER(x)
+			 SE( max < x) Entao
+				max <- x
+			 FIMSE
+		  FIMSE
+	   FIMENQUANTO
+	   ESCREVER("O maior número introduzido é: ",max)
+
+	FIM

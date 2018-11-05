@@ -1,0 +1,26 @@
+Ed: area, custoGrama, custoTotal: real
+	arvores, arbustos, custoArbustos, custoArvores, tempoArbustos, tempoArvores, tempoGrama, tempoHora: inteiro
+
+alg
+	incio
+		Escrever("Introduza a área em m2 onde será colocada a relva")
+		ler(area)
+		Escrever("Introduza o número de árvores e arbustos desejados")
+		ler(arvores, arbustos)
+	
+		custoGrama <- area * 10
+		tempoGrama <- area * 300
+		
+		custoArvores <- 20 * arvores
+		tempoArvores <- arvores * 600
+		
+		custoArbustos <- arbustos * 15
+		tempoArbustos <- arbustos * 400
+		
+		tempoHora <- ((tempoGrama + tempoArvores + tempoArbustos) DIV 60 ) DIV 60
+		
+		custoTotal <- tempoHora * 10 + custoGrama + custoArvores + custoArbustos
+		
+		Escrever("Para executar o serviço serão necessárias ",tempoHora," horas e vai ficar por ",custoTotal,"€")
+	fim
+		

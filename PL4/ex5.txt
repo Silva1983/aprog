@@ -1,0 +1,31 @@
+Ed octal, dig, expoente, octal2: inteiro
+	decimal, num: real
+Alg
+	INICIO
+		dig <- 0
+	    decimal <- 0
+	    octal <- 0
+	    expoente <- 0
+	    ESCREVER("Introduza um número na baSE 8")
+	    leia(octal)
+	    octal2 <- octal
+	    ENQUANTO (octal <> 0) FAÇA
+
+			dig <- octal Mod 10
+			SE (dig >= 8) ENTAO
+				ESCREVER("Número inválido, introduza outro na baSE 8")
+				leia(octal)
+				octal2 <- octal
+			FIMSE
+			octal <- octal div 10
+		FIMENQANTO
+		octal <- octal2
+		ENQUANTO (Octal <> 0) FAÇA
+				dig <- octal mod 10
+				decimal <- dig * (8^expoente)
+				num <- num + decimal
+				octal <- octal DIV 10
+				expoente <- expoente + 1
+				FIMENQANTO
+		ESCREVER("O número",octal2," na baSE 8, é: ",num," na baSE 10")
+	FIM

@@ -1,0 +1,51 @@
+Ed
+alg
+	INICIO
+		REPITA
+			  ESCREVER("Introduza um número")
+			  LER(num)
+		ENQUANTO(num < 0)
+		
+		numero <- num
+		SE (num > 9) ENTÃO
+		   ENQUANTO (num <> 0) FACA
+
+					dig <- num MOD 10
+					cap <- cap *10 + dig
+					num <- num DIV 10
+		   FIMENQUANTO
+		   
+		   SE (numero = cap) Então
+			  ESCREVER("O número é capicua ",cap)
+		   SENÃO
+				ESCREVER("O número introduzido não é capicua")
+		   FIMSE
+		SENAO
+			 ESCREVER("Número inválido")
+		FIMSE
+	FIM
+	
+Ed num, dig, capicua: inteiro
+alg
+	INICIO
+		ESCREVER("Introduza um número")
+        LER(num)
+        numero <- num
+        ENQUANTO (num < 9) faça
+                  Escreva("Número inválido, introduza outro número")
+                  leia(num)
+                  numero <- num
+        FIMENQUANTO
+
+        ENQUANTO (num <> 0 ) FAÇA
+            dig <- dig mod 10
+            num <- num div 10
+            capicua <- capicua * 10 + dig
+
+        FIMENQUANTO
+        SE ( numero = capicua) Então
+            ESCREVER("O número é capicua")
+        SENAO
+            ESCREVER("O número introduzido não é capicua")
+        FIMSE
+	FIM

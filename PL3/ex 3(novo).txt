@@ -1,0 +1,30 @@
+Ed: contPar, contImpar, contTotal, num, par, soma: inteiro
+	media, percentagem: real
+alg
+	INICIO
+		contPar <- 0
+		contTotal <- 1
+		contImpar <- 0
+		soma <- 0
+		media <- 0
+		
+		ESCREVER("Introduza um número positivo, negativo para terminar")
+		LER(num)
+		ENQUANTO (num > 0)
+			contTotal <- contTotal + 1
+			par <- num mod 2
+			
+			SE (par = 0) ENTAO
+				contPar <- contPar + 1
+				percentagem <- (contPar / contTotal) * 100
+			SENAO	
+				contImpar <- contImpar + 1
+				
+				media <- contImpar / contTotal
+			FIMSE
+			
+			LER (num)
+			
+		FIMENQUANTO
+		ESCREVER("A porcentagem dos números pares é: ",percentagem," e a média dos números impares é: ",media)
+	FIM

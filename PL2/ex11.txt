@@ -1,0 +1,25 @@
+Ed: func, valor:real
+
+Alg
+	Inicio
+	
+		Escrever("Introduza o valor para a função de x")
+		ler(func)
+		
+		valor <- 0
+		Se (func < 0) Entao
+			Escrever("O valor da função é ",func)
+			
+		senão
+			se ( func = 0) Entao
+				Escrever("O valor da função é 0")
+			senao
+				se (func > 0) Entao
+					valor <- func^2 - 2*func
+					Escrever("O valor da função é ",valor)
+				fimse
+			fimse
+		fimse
+	Fim
+	
+	

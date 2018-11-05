@@ -1,0 +1,60 @@
+a)
+
+Ed: num, dig, total : inteiro
+	par: real
+alg
+	inicio
+		total <- 0
+		Escrever("Intrduza um número")
+		ler(num)
+		ENQUANTO (num <> 0)
+			dig <- num mod 10
+			num<- num div 10
+			par <- dig mod 2
+			SE (par = 0 ) ENTAO
+				total <- total + dig
+			FIMSE
+		FIMENQUANTO
+		Escrever("A soma dos digitos pares é ", total)
+	fim
+
+b)
+
+Ed: num, total: inteiro 
+alg
+	INICIO
+		total <- 0
+		num <- 1
+		ENQUANTO ( num > 0)
+			ESCREVER("Introduza um número")
+			LER(num)
+			SE (num > 0) ENTAO
+				Total <- total + num
+			FIMSE
+		FIMENQUANTO
+		Escrever("A soma dos números positivos é ",total)
+	FIM
+	
+					ou
+					
+Ed: num, dig, somaTotal, somaNum: inteiro
+alg
+	INICIO
+		ESCREVER("Introduza um número")
+		LER (num)
+		ENQUANTO (num> 0) faça
+				ENQUANTO (num <> 0 ) faça
+						 dig <- num mod 10
+						 num <- num div 10
+						 SE (dig mod 2= 0) ENTAO
+							somaNum <- SomaNum + dig
+						 FIMSE
+				FIMENQUANTO
+				somaTotal <- somaTotal + somaNum
+				ESCREVER("A soma dos digitos é", somaNum)
+				somaNum <- 0
+				ESCREVER("Introduza outro número")
+				LER(num)
+		FIMENQUANTO
+		ESCREVER("A soma total é de",somaTotal)
+	FIM

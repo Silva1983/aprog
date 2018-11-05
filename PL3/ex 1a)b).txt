@@ -1,0 +1,32 @@
+a)
+	//O algoritmo do exemplo calcula o factorial de um número introduzido pelo utilizador (num)
+	
+Ed: res, num, n, x: Inteiro
+
+alg
+	INICIO
+		res <- 1
+		ler (num)
+		ler(n)
+		PARA (x <- num Ate n passo -1) Fazer
+			res <- res * x
+		FIMPARA
+		ESCREVER("O resultado é: ",res)
+	FIM
+
+//Após as alterações ao algoritmo, este agora faz sucessivas multiplicações de um determinado número
+//("num" introduzido pelo utilizador) pelo seu anterior até um limite mínimo também definido pelo utilizador(n)
+//Este algoritmo é finito
+b)
+
+Ed: res, num, n, x: Inteiro
+alg
+	INICIO
+		res <-  1
+		ler(num)
+		ENQUANTO (num > 0) Faça
+			ler (num)
+			res <- res * num
+		FIMENQUANTO
+		ESCREVER("O resultado é ", res)
+	FIM

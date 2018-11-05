@@ -1,0 +1,59 @@
+5.
+	a) Verifica as notas dos alunos de uma turma, se a média
+	 das notas destes alunos forem abaixo de 0.2 então é uma turma muito má,
+	 se forem entre ]0.2 e 0.5[ é uma turma fraca, se forem entre ]0.5 e 0.7] é uma turma razoável,
+	 se forem entre ]0.7 e 0.9[ é uma turma boa
+	 
+	 b)
+	 
+	 ed: aprovados,notaMaxima, notaMinima, turmaBoa, turmaExcelente, turmaFraca, turmaMa, turmaRazoavel: real
+	 
+	 alg
+		inicio
+			ler (aprovados)
+			Escrever("Introduza nota para Turma má")
+			ler(turmaMa)
+			
+			Escrever("Introduza nota para Turma fraca")
+			ler(turmaFraca)
+			
+			Escrever("Introduza nota para Turma Razoável")
+			ler(turmaRazoavel)
+			
+			Escrever("Introduza nota para Turma Boa")
+			ler(turmaBoa)
+			
+			Escrever("Introduza nota para Turma Excelente")
+			ler(turmaExcelente)
+			
+			Escrever("Introduza nota minima")
+			ler(notaMinima)
+			
+			Escrever("Introduza nota máxima")
+			ler(notaMaxima)
+			
+			Se (aprovados <notaMinima) ou (aprovados >notaMaxima) 
+					escrever("Valor inválido!")
+			Senão
+				Se (aprovados <= turmaMa) Então
+					escrever("Turma má!")
+				Senão
+					Se (aprovados <= turmaFraca) Então
+						escrever("Turma Fraca")
+					Senão
+						Se (aprovados <= turmaRazoavel) Então
+							escrever ("Turma Razoável")
+						Senão
+							Se (aprovados <= turmaBoa) Então
+								escrever ("Turma BOA!")
+							Senão
+								escrever ("Turma Excelente")
+							fimse
+						fimse
+					fimse
+				fimse
+			fimse
+			
+		
+		
+		fim

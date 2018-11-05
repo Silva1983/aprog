@@ -1,0 +1,43 @@
+Ed: mult, multiplo, div, x, y: real
+	i, j: inteiro
+
+alg
+	Inicio
+		mult <- 0
+		multiplo <- 0
+		div <- 0
+		Escrever("Introduza dois valores")
+		ler(x, y)
+		
+		Para i =1 até i=10 i++ Fazer
+			mult <- i * y
+			div <- y / i
+			Se (x = mult) Então
+				escrever(x", é múltiplo de ",y)
+			senão
+				se (x <> mult) Entao
+					escrever(x", não é múltiplo de ",y)	
+				senão
+					se (x <> mult) e (x <> div) Entao
+						escrever(x", não é múltiplo nem divisor de ",y)
+					fimse
+				fimse
+			fimse
+		fimpara
+		
+		Para j=1 até j=10 j++ fazer
+			div <- 0
+			multiplo <- x * i
+			se ( y = multiplo) Entao
+				Escrever(y", é múltiplo de ",x)
+			senão
+				se (y <> multiplo) Entao
+					escrever(y", não é múltiplo de ",x)
+				senao
+					se (y <> multiplo) e ( y<> div) Entao
+						Escrever(y", não é multiplo nem divisor de ", x)
+					fimse
+				fimse
+			fimse
+		fimpara
+		

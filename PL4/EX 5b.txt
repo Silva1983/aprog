@@ -1,0 +1,34 @@
+Ed num, num2, baSE,baSE2, dig, expoente, decom:inteiro
+  decimal, numero: real
+alg
+	INICIO
+		REPETIR
+			ESCREVERl("Qual a sua baSE")
+			LER (baSE)
+			baSE2 <- baSE
+		ENQUANTO (baSE >=9)
+		
+	    ESCREVER("Introduza um número")
+	    LER(num2)
+	    num <- num2
+	    ENQUANTO (num2 <> 0) faça
+            decom <- num2 mod 10
+            num2 <- num2 div 10
+            
+            SE (decom >=  baSE) entao
+               ESCREVERl("Número inválido, introduza novo número")
+               LER(num2)
+               num <- num2
+            FIMSE
+
+		FIMENQUANTO
+	    num2 <- num
+	    ENQUANTO (num2 <> 0 ) faça
+				dig <- num2 mod 10
+				decimal <- dig * (baSE^expoente)
+				numero <- numero + decimal
+				num2 <- num2 div 10
+				expoente <- expoente + 1
+		FIMENQUANTO
+		ESCREVER("O número ",num," na baSE",baSE2," é:",numero)
+	FIM

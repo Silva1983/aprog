@@ -1,0 +1,68 @@
+ED: oct1, oct2, octal1, num1,num2, octal2,somaParc,soma1, soma2, cont :inteiro
+   somaTotal:real
+   
+ALG
+	INICIO
+		
+		oct1 <- 0
+		oct2 <- 0
+		cont <- 0
+		somaParc <- 0
+		somaTotal <- 0
+		soma1 <- 0
+		soma2 <- 0
+		   
+		ESCREVA("Introduza um número em octal")
+		LEIA(oct1)
+		octal1 <- oct1
+
+		ENQUANTO (oct1 <> 0 ) FAÇA
+
+			num1 <- oct1 mod 10
+			oct1 <- oct1 div 10
+
+			SE (num1 > 7) ou (num1 <0) Então
+				ESCREVA("Número inválido, introduza outro número na baSE 8")
+				LEIA(oct1)
+				octal1 <- oct1
+			FIMSE
+
+		FIMENQUANTO
+				
+		ESCREVA("Introduza outro número em octal")
+		LEIA (oct2)
+		octal2 <- oct2
+   
+		ENQUANTO (oct2 <> 0) FAÇA
+			num2 <- oct2 mod 10
+			oct2 <- oct2 div 10
+			
+			SE (num2 > 7) ou (num2 < 0) Então
+				ESCREVA("Número inválido, introduza outro número na baSE 8")
+				LEIA(oct2)
+				octal2 <- oct2
+			FIMSE
+		FIMENQUANTO
+		
+		oct1 <- octal1
+		oct2 <- octal2
+		
+		ENQUANTO (octal1 <>0) ou (octal2 <>0) FAÇA
+			soma1 <- octal1 mod 10
+			soma2 <- octal2 mod 10
+			
+			octal1 <- octal1 div 10
+			octal2 <- octal2 div 10
+			
+			somaParc <- soma1 + soma2
+
+			SE (somaParc > 7) Então
+				somaParc <- (somaParc - 8) + 10
+			FIMSE
+
+			somaTotal <- somaTotal + somaParc * 10^cont
+			cont <- cont + 1
+		FIMENQUANTO
+		ESCREVA (oct1 ," + ",oct2," = ",somaTotal)
+		
+	FIM

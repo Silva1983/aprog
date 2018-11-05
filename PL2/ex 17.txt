@@ -1,0 +1,24 @@
+Ed: area, aresta, volume REAL
+
+alg
+	inicio
+		ler(area)
+		Se (area > 0) Entao
+			aresta <- Sqrt (area / 6)
+			volume <- aresta^3
+			Escrever("Volume do cubo = ", volume)
+			se (volume <= 1) Entao
+				escrever("Cubo Pequeno")
+			senão
+				se (volume > 1) e (volume <= 2) Entao
+					escrever("Cubo médio")
+				senão
+					se (volume > 2) Entao
+						escrever ("Cubo Grande")
+					fimse
+				fimse
+			fimse
+		senão
+			escrever("Valor de área incorreto")
+		fimse
+	fim
