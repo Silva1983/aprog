@@ -10,17 +10,17 @@ package pl7;
  * @author ssilv
  */
 import java.util.Scanner;
+
 public class ex3 {
-    
+    public static Scanner ler = new Scanner(System.in);
     public static void main (String[] args){
-        int nNomes;
+        
         int n = 0;
         String nomes[] = new String[100];
-        Scanner ler = new Scanner(System.in);
-        String m ="1-Ler Nomes\n2-Enigma Nome\n3-Terminar\n\nEscolha uma opção:";
-        nNomes = lerNomes(vec);
-
-        String [] vec = new String [nNomes];
+        
+        
+        String m ="1-Ler Nomes\n2-Enigma Nome\n3-Listar\n4-Terminar\n\nEscolha uma opção:";
+        
 
         char op;
         do{
@@ -28,7 +28,8 @@ public class ex3 {
             op = ler.next().charAt(0);
             switch (op){
                 case '1':
-                    n = lerNomes(nomes);
+                    n = lerNomes(nomes, n);
+                   
                     break;
                 case '2':
                     System.out.println("Nome:");
@@ -36,23 +37,43 @@ public class ex3 {
                     n = enigma(nomes, nome, n);
                     break;
                 case '3':
+                    listar(nomes, n);
+                    break;
+                case '4':
                     break;
                 default:
                     System.out.println("Opção inválida!!");
                            
             }
-        } while(op !='3');
+        } while(op !='4');
     }
     
-    private static int lerNomes(String[] vec){
+    private static int lerNomes(String[] nomes, int n){
         //Lê uma sequência de nomes terminada com a palavra FIM.
             //Armazena os nomes em vec e retorna o número desses nomes.
-        
-        for (int i = 0; i < nomes )
+            
+            
+            System.out.println("Introduza o nome");
+            for (int i = 0; i <=nomes.length; i++){
+                
+                    
+                    nomes[i]= ler.nextLine();
+                    n++;
+                   
+                    if (nomes[i].equalsIgnoreCase("Fim"))
+                        break;
+                }
+                
+            n= n-1;
+     return n;
     }
     
-    private static int listar (String[] vec, int n){
+    private static void listar (String[] vec, int n){
         // Apresenta os primeiros n elementos de vec
+        
+        for(int i = 0; i <n; i++){
+            System.out.println(vec[i]);
+        }
         
     }
     

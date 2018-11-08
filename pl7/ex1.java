@@ -24,6 +24,8 @@ public class ex1 {
         verifica quais desses elementos são pares, calcula a quantidades, a sua soma e por último, a média
         desses números.
         */
+       
+       
         int i, s = 0, c = 0;
         int [] v = new int[10];
         
@@ -34,22 +36,25 @@ public class ex1 {
             System.out.println("Número");
             v[i] = ler.nextInt();
         }
-        menorInteiro(v);
+        int menor = menorInteiro(v);
+        System.out.println("O menor número introduzido foi "+ menor);
+        mostraIndice(menor, v);
         
         for (i = 0; i < v.length; i++) {
             if (v[i] % 2 == 0) {
                 s = s + v[i];
                 c++;
-                System.out.println("A soma dos números pares é de: "+s);
+                 
             }
         }
+        System.out.println("A soma dos números pares é de: "+s);
         if (c != 0)
             System.out.println("A média dos números pares é de: " +((double)s)/c);
         else
             System.out.println("Operação impossível de realizar");
     }
     
-    public static void menorInteiro (int v[]){
+    public static int menorInteiro (int v[]){
         int indice = 0;
         int menor = v[0];
         
@@ -59,7 +64,19 @@ public class ex1 {
                 indice = i+1;
             }
        }
-        System.out.println("O menor número do vetor é: "+ menor+ " e o indice desse valor é: " + indice);
+        return menor;
+    }
+    
+    public static void mostraIndice (int menor, int v[]){
+        
+        
+        for (int i = 0; i<v.length; i++){
+            if (v[i] == menor ){
+                System.out.println("Os menores indices desses números são "+ i);
+            }
+            
+        }
+        
     }
     
    
