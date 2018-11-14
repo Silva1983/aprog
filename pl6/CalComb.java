@@ -7,9 +7,7 @@ package pl6;
 
 /**
  *
- * @author ASUS
- * Exercício 4
- * Analise a classe CalCombinatorio definida nas aulas
+ * @author ASUS Exercício 4 Analise a classe CalCombinatorio definida nas aulas
  * teóricas. Crie um projeto onde vai incluir esta classe CalCombinatorio.
  * Acrescente à classe CalCombinatorio mais dois métodos de classe, o método
  * arranjos e o método permutações. Crie uma classe TesteCalCombinatorio para
@@ -31,14 +29,15 @@ public class CalComb {
     }
 
     public static long arranjos(long n, long p) {
-        
-        if (n<p)
+
+        if (n < p) {
             return -1;
-        return factorial(n) / factorial(n-p);
+        }
+        return factorial(n) / factorial(n - p);
     }
 
     public static long permutações(long n) {
-        
+
         return factorial(n);
     }
 }

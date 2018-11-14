@@ -36,8 +36,7 @@ public class Exer2 {
         System.out.println("Indique a disciplina.");
         String nomeDisc = input.nextLine();
 
-        System.out.println("Quantos alunos tiveram aprovação à disciplina?");
-        int positivas = input.nextInt();
+        int positivas = lerAprovados(nomeDisc, nAlunos); 
         int negas = nAlunos - positivas;
 
         discInfo(nomeDisc, positivas, negas);
@@ -47,17 +46,16 @@ public class Exer2 {
             System.out.println();
             for (int i = 0; i <= nDisc - 1; i++) {
                 
+                input.nextLine();
                 System.out.println("Indique a próxima disciplina.");
                 String nomeDisc2 = input.nextLine();
-                input.nextLine();
 
-                System.out.println("Quantos alunos tiveram aprovação à disciplina?");
-                int positivas2 = input.nextInt();
+                int positivas2 = lerAprovados(nomeDisc2, nAlunos);      
                 int negas2 = nAlunos - positivas2;
 
                 discInfo(nomeDisc2, positivas2, negas2);
 
-                System.out.println();
+                input.nextLine();
                 
                 i++;
             }
@@ -70,11 +68,22 @@ public class Exer2 {
         do {
             num = input.nextInt();
             if (num <= 0) {
-                System.out.println("O nº inserido é inválido. Insira novamente.");
+                System.out.println("O nº é inválido. Insira novamente.");
             }
         } while (num <= 0);
 
         return num;
+    }
+    
+    private static int lerAprovados(String discName, int totalAlunos) {
+        int aprovados;
+        System.out.println("Quantos alunos tiveram aprovação a " + discName);
+        aprovados = input.nextInt();
+        while (aprovados > totalAlunos || aprovados < 0) {
+            System.out.println("Nº de positivas maior que nº total de alunos. Insira novamente.");
+            aprovados = input.nextInt();
+        }
+        return (aprovados);
     }
 
     private static void discInfo(String discName, int aprovados, int reprovados) {
@@ -89,6 +98,9 @@ public class Exer2 {
         System.out.printf("%n- Negativas: ");
         for (int j = 0; j < reprovados; j++) {
             System.out.print("*");
+        }
+        if (aprovados == 0) {
+            System.out.println();
         }
     }
 }

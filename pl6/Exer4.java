@@ -21,41 +21,43 @@ import java.util.Scanner;
 public class Exer4 {
 
     static Scanner input = new Scanner(System.in);
-    
+
     public static void main(String[] args) {
-        
-        Formatter obj1=new Formatter(System.out);
-        Scanner obj2=new Scanner(System.in);
-    
+
+        Formatter obj1 = new Formatter(System.out);
+        Scanner obj2 = new Scanner(System.in);
+
         String m = "Escolha um método:\n1) Permutações\n2) Arranjos sem repetiçao";
-        
+
         obj1.format("%s%n", m);
         int op;
         do {
-            op=obj2.nextInt();
-            if (op <= 0 || op > 2)
+            op = obj2.nextInt();
+            if (op <= 0 || op > 2) {
                 obj1.format("%s%n", "A opção inserida é inválida. Insira novamente.");
-        } while(op <= 0 || op > 2);
-    
-        switch (op){
+            }
+        } while (op <= 0 || op > 2);
+
+        switch (op) {
             case 1:
-                obj1.format("%s%n","Insira n");
-                long n=obj2.nextLong();
-                
-                long res1=CalComb.permutações(n);
+                obj1.format("%s%n", "Insira n");
+                long n = obj2.nextLong();
+
+                long res1 = CalComb.permutações(n);
                 obj1.format("%s%d%n", "Resultado = ", res1);
                 break;
             case 2:
-                obj1.format("%s%n","Insira n");
-                n=obj2.nextLong();
+                obj1.format("%s%n", "Insira n");
+                n = obj2.nextLong();
                 obj1.format("%s%n", "Insira p");
-                long p=obj2.nextLong();
-                
-                long res2=CalComb.arranjos(n, p);
-                if (res2 != -1)
+                long p = obj2.nextLong();
+
+                long res2 = CalComb.arranjos(n, p);
+                if (res2 != -1) {
                     obj1.format("%s%d%n", "Resultado = ", res2);
-                else
+                } else {
                     obj1.format("Erro! (n<p)S");
+                }
                 break;
         }
     }
