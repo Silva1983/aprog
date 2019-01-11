@@ -1,0 +1,5 @@
+    miguelc@xyz.pt; ; 21/1/1996; A-Team
+ricardol@xyz.pt ; Ricardo Oliveira  ; 25/3/1996 ; A-Team
+lugomes@xyz.pt  ;Luis Gomes ;  2/3/1997 ;A-Team
+    ricardosxyz.pt ; Ricardo Silva  ; 5/3/1996 ; A-Team
+psilva@xyz.pt  ;Pedro Silva ;  7/7/1997 ;A-Team

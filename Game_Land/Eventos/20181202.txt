@@ -1,0 +1,6 @@
+110-estrategia-150
+120-estrategia-200
+210-aventura-150
+220-aventura-180
+310-acao-100
+320-acao-120

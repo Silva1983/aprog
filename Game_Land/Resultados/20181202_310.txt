@@ -1,0 +1,19 @@
+wizy@abc.pt;  100
+broliv@abc.pt;  20
+ribeiro@xyz.pt; 30
+
+pedroc@abc.pt; 100
+ruic@xyz.pt;  90
+rafa@xyz.pt; 90
+
+lsantos@abc.pt; 70
+nunoc@abc.pt  ;80
+xicos@xyz.pt; 60
+
+jorgegomes@abc.pt  ;50
+mpereira@xyz.pt;0
+filipes@abc.pt; 60
+
+ac@abc.pt;150
+rg@xyz.pt;  100
+ls@xyz.pt   ;50
