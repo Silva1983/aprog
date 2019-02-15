@@ -1,0 +1,76 @@
+package PL8;
+
+/**
+ *
+ * @author Aluno DEI
+ */
+public class EX1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        // imprime o maior número de cada linha
+        int x;
+        int m[][] = {{1,4,2,1}, {9,7,2,2}, {1,7,3,5},{2,5,0,3},{4,7,2,1}};
+        
+        for(int i=0; i <m.length; i++){
+            x = m[i][0];
+            //x = ao primeiro número de cada linha
+            for (int j= 1; j < m[i].length; j++){
+                if (m[i][j] > x){
+                    x = m[i][j];
+                    //compara o primeiro número de cada linha com os restantes elementos da linha, x vai tomar o valor
+                    //do maior valor
+                }
+            }
+            System.out.println(x);
+            //imprime o maior de cada linha
+        }
+         matrizTransposta(m);
+        
+    }
+        private static void matrizTransposta(int [][]m){
+            for(int i =0; i<m.length-1; i++){
+                System.out.println(" ");
+                for(int j= 0;j< m.length;j++){
+                    System.out.print(m[j][i]+ " "); 
+                }
+            }
+            
+        }
+        
+        private static void media(int [][]m){
+            
+            int quantidadeTotal = 0;
+            int somatorioTotal = 0;
+            double mediaGlobal;
+            
+            int [] quantidadeColunas = new int[m[0].length];
+            int []somatorioColunas = new int[m[0].length];
+            double [] mediaColunas = new double[m[0].length];
+            
+            
+            for (int i = 0; i< m.length; i ++){
+                for(int j= 0; j<m.length; j++){
+                    
+                    quantidadeTotal++;
+                    somatorioTotal = somatorioTotal + m[i][j];
+                    
+                    quantidadeColunas[j]++;
+                    somatorioColunas[j] = somatorioColunas[j] + m[i][j];
+                }
+            }
+            
+            mediaGlobal = (double) somatorioTotal / quantidadeTotal;
+            System.out.println("M�dia global: " + mediaGlobal);
+            
+            for (int i = 0; i < mediaColunas.length; i++){
+                mediaColunas [i] = (double) somatorioColunas[i] / quantidadeColunas[i];
+                System.out.println("M�dia da coluna " + i + ": "+ mediaColunas);
+            }
+        }
+  
+}
