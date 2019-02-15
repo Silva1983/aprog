@@ -5,6 +5,7 @@
  */
 package matrizes;
 
+
 import java.io.FileNotFoundException;
 import java.util.InputMismatchException;
 import static matrizes.Matrizes.criarMatriz;
@@ -213,19 +214,29 @@ public class matrizMenus {
                         menuRotacao(matriz, linhas, colunas);
                         break;
                     case 2:
-                        matriz= Matrizes.rodarMatriz(matriz, linhas, colunas);
-                        matriz= Matrizes.rodarMatriz(matriz, linhas, colunas);
-                        matriz= Matrizes.rodarMatriz(matriz, linhas, colunas);
-                        menuRotacao(matriz, linhas, colunas);
+                        if (linhas != colunas){
+                            System.out.println("Impossível rodar matriz, porque não é uma matriz quadrada");
+                            menuRotacao(matriz, linhas, colunas);
+                        }else{
+                            matriz= Matrizes.rodarMatriz(matriz, linhas, colunas);
+                            matriz= Matrizes.rodarMatriz(matriz, linhas, colunas);
+                            matriz= Matrizes.rodarMatriz(matriz, linhas, colunas);
+                            menuRotacao(matriz, linhas, colunas);
+                        }
                         break;
                     case 3:
                         matriz= Matrizes.rodarMatriz(matriz, linhas, colunas);
                         menuRotacao(matriz, linhas, colunas);
                         break;
                     case 4:
-                        matriz= Matrizes.rodarMatriz(matriz, linhas, colunas);
-                        matriz= Matrizes.rodarMatriz(matriz, linhas, colunas);
-                        menuRotacao(matriz, linhas, colunas);
+                        if (linhas != colunas){
+                            System.out.println("Impossível rodar matriz, porque não é uma matriz quadrada");
+                            menuRotacao(matriz, linhas, colunas);
+                        }else{
+                            matriz= Matrizes.rodarMatriz(matriz, linhas, colunas);
+                            matriz= Matrizes.rodarMatriz(matriz, linhas, colunas);
+                            menuRotacao(matriz, linhas, colunas);
+                        }
                         break;
                     
                     case 5:
@@ -330,8 +341,7 @@ public class matrizMenus {
             try{
                 System.out.println("\n1 - Abrir matriz"
                         + "\n2 - Avançar"
-                        + "\n3 - Reverter alterações"
-                        + "\n4 - Guardar matriz"
+                        + "\n3 - Guardar matriz"
                         + "\n0 - Saír");
                 op = ler.nextInt();
 
@@ -343,14 +353,9 @@ public class matrizMenus {
                         menu2(matriz, linhas, colunas);
                         break;
                     case 3:
-                        String ficheiro = "temp";
-                        ler.nextLine();
-                        matrizCarregar.carregarMatriz(ficheiro, linhas, colunas);
-                        break;
-                    case 4:
                         System.out.println("Introduza o nome do ficheiro para a sua matriz");
                         ler.nextLine();
-                        ficheiro = ler.nextLine();
+                        String ficheiro = ler.nextLine();
                         matrizCarregar.gravarFicheiro(matriz, ficheiro);
                         break;
                     case 0:
@@ -365,7 +370,7 @@ public class matrizMenus {
                 ler.nextLine();
                 abrirMenu();
             }
-        }while(op <0 || op >1);
+        }while(op <0 || op >3);
     }
     
     public static void abrirMatriz2()throws FileNotFoundException{

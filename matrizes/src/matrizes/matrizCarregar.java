@@ -5,6 +5,7 @@
  */
 package matrizes;
 
+import javax.swing.undo.UndoManager;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Formatter;

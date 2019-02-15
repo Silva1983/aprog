@@ -165,7 +165,7 @@ public class Matrizes {
                 for(int j = 0; j<matriz[i].length+temp; j++){
                     soma = soma+matriz[j][i];
                 }
-                System.out.print("\t\t" + soma+ "\t");
+                System.out.print("\t" + soma+ "\t");
                 soma = 0;
             }
            
@@ -173,7 +173,6 @@ public class Matrizes {
             temp = 0;
             if ( colunas > linhas){
                 temp = colunas - linhas;
-                System.out.println(temp);
                 for(int i = 0; i<matriz.length+temp; i++){
                     for(int j = 0; j<matriz.length; j++){
                         soma = soma+matriz[j][i];
@@ -235,9 +234,10 @@ public class Matrizes {
         ler.nextLine();
         
         System.out.println("\t\tMédia das colunas:");
-        int temp;
+       
+        int temp=0;
         if ( linhas >colunas){
-            temp = linhas - colunas;
+             temp = linhas - colunas;
             for(int i = 0; i<matriz.length-temp; i++){
                 for(int j = 0; j<matriz[i].length+temp; j++){
                     soma = soma+matriz[j][i];
@@ -249,7 +249,6 @@ public class Matrizes {
         }else {
             if ( colunas > linhas){
                 temp = colunas - linhas;
-                System.out.println(temp);
                 for(int i = 0; i<matriz.length+temp; i++){
                     for(int j = 0; j<matriz.length; j++){
                         soma = soma+matriz[j][i];
@@ -275,6 +274,7 @@ public class Matrizes {
         pausa();
         soma = 0;
         temp = 0;
+        
         System.out.println("\t\tMédia total: ");
         for(int i = 0; i<matriz.length; i++){
             for(int j = 0; j<matriz[i].length; j++){
@@ -358,8 +358,10 @@ public class Matrizes {
                 }
             }
             System.out.println("\t\t" + soma);
-        }else
+        }else{
             System.out.println("Não é possível calcular diagonal, não é matriz quadrada");
+            matrizMenus.menu3(matriz, linhas, colunas);
+        }
         pausa();
         diagonalSecundaria(matriz, linhas, colunas);  
     }
