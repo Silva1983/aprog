@@ -31,11 +31,20 @@ public class morada {
      */
     private String endMorada;
    
-    private final String CODIGO_POSTAL_OMISSAO = "Sem código postal";
+    private final static String CODIGO_POSTAL_OMISSAO = "Sem código postal";
     
-    private final String LOCALIDADE_POR_OMISSAO = "Sem localidade";
+    private final static String LOCALIDADE_POR_OMISSAO = "Sem localidade";
     
-    private final String MORADA_POR_OMISSAO = "Sem morada";
+    private final static String MORADA_POR_OMISSAO = "Sem morada";
+   
+    /**
+     * Constroi uma instância da morada por omissão
+     */
+    public morada(){
+        localidade = LOCALIDADE_POR_OMISSAO;
+        cPostal = CODIGO_POSTAL_OMISSAO;
+        endMorada = MORADA_POR_OMISSAO;
+    }
     
 /**
  * Constroi uma instancia da morada do individuo, recebendo o endmorada, código postal e a localidade
@@ -49,14 +58,7 @@ public class morada {
         this.cPostal = cPostal;
         
     }
-    /**
-     * Constroi uma instância da morada por omissão
-     */
-    public morada(){
-        this.localidade = LOCALIDADE_POR_OMISSAO;
-        this.cPostal = CODIGO_POSTAL_OMISSAO;
-        this.endMorada = MORADA_POR_OMISSAO  ;
-    }
+    
     /**
      * Devolve a morada
      * @return endMorada

@@ -38,6 +38,11 @@ public class ComplementarMain {
         System.out.println("Introduza a localidade do " + c1.getNome());
         c2.setLocalidade(ler.nextLine());
         
+        System.out.println(c1.toString());
+        System.out.println("*******************************************************************************************************");
+        System.out.println(c2.toString());
+        System.out.println("*******************************************************************************************************");
+        
         if (c1.imc(c1.getPeso(), c1.getAltura()) < 16 && c1.imc(c1.getPeso(), c1.getAltura()) <=16.9){
             System.out.println("Muito abaixo do peso!");   
         }else
@@ -59,10 +64,7 @@ public class ComplementarMain {
                                 if (c1.imc(c1.getPeso(), c1.getAltura()) > 40){
                                     System.out.println("Obesidade Grau III");
                                 }
-        System.out.println("*******************************************************************************************************");
-        System.out.println(c1.toString());
-        System.out.println("*******************************************************************************************************");
-        System.out.println(c2.toString());
+        
     }
     
 }

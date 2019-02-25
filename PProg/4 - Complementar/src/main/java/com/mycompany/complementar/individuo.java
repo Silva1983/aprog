@@ -33,11 +33,22 @@ public class individuo {
     
     private static final String NOME_POR_OMISSAO = "Sem nome";
     
-    private final int IDADE_POR_OMISSAO = 0;
+    private static final int IDADE_POR_OMISSAO = 0;
     
-    private final int PESO_POR_OMISSAO = 0;
+    private static final int PESO_POR_OMISSAO = 0;
     
-    private final int ALTURA_POR_OMISSAO = 0;
+    private static final int ALTURA_POR_OMISSAO = 0;
+    
+    
+    /**
+     * Constroi uma instância por omissão
+     */
+    public individuo(){
+        this.nome = NOME_POR_OMISSAO;
+        this.altura = ALTURA_POR_OMISSAO;
+        this.peso = PESO_POR_OMISSAO;
+        this.idade = IDADE_POR_OMISSAO;
+    }
     
     /**
      * Constroi uma instancia do Individuo, recebendo o nome, idade, peso e altura
@@ -52,15 +63,7 @@ public class individuo {
         this.altura = altura;
         this.peso = peso;
     }
-    /**
-     * Constroi uma instância por omissão
-     */
-    public individuo(){
-        this.nome = NOME_POR_OMISSAO;
-        altura = ALTURA_POR_OMISSAO;
-        peso = PESO_POR_OMISSAO;
-        idade = IDADE_POR_OMISSAO;
-    }
+    
     /**
      * Devolve o nome do individuo
      * @return nome
