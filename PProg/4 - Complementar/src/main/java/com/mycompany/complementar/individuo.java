@@ -56,7 +56,7 @@ public class individuo {
      * Constroi uma instância por omissão
      */
     public individuo(){
-        nome = NOME_POR_OMISSAO;
+        this.nome = NOME_POR_OMISSAO;
         altura = ALTURA_POR_OMISSAO;
         peso = PESO_POR_OMISSAO;
         idade = IDADE_POR_OMISSAO;

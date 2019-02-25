@@ -53,9 +53,9 @@ public class morada {
      * Constroi uma instância da morada por omissão
      */
     public morada(){
-        localidade = LOCALIDADE_POR_OMISSAO;
-        cPostal = CODIGO_POSTAL_OMISSAO;
-        endMorada = MORADA_POR_OMISSAO  ;
+        this.localidade = LOCALIDADE_POR_OMISSAO;
+        this.cPostal = CODIGO_POSTAL_OMISSAO;
+        this.endMorada = MORADA_POR_OMISSAO  ;
     }
     /**
      * Devolve a morada
