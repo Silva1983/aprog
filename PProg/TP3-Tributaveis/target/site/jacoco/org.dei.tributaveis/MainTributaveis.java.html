@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MainTributaveis.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TP3-Tributaveis</a> &gt; <a href="index.source.html" class="el_package">org.dei.tributaveis</a> &gt; <span class="el_source">MainTributaveis.java</span></div><h1>MainTributaveis.java</h1><pre class="source lang-java linenums">package org.dei.tributaveis;
+
+<span class="nc" id="L3">public class MainTributaveis {</span>
+
+    public static void main(String[] args) {
+
+<span class="nc" id="L7">        Veiculo v1 = new Veiculo(&quot;22-33-CC&quot;, 1000, &quot;encarnado&quot;);</span>
+<span class="nc" id="L8">        System.out.println(&quot;v1: &quot; + v1);</span>
+        
+<span class="nc" id="L10">        Veiculo v2 = new Veiculo(&quot;44-55-CL&quot;, 2500, Cores.AZUL);</span>
+<span class="nc" id="L11">        System.out.println(&quot;v2: &quot; + v2);</span>
+        
+<span class="nc" id="L13">        Veiculo v3 = new Veiculo(&quot;33-45-RF&quot;, 1000, Veiculo.VERDE);</span>
+<span class="nc" id="L14">        System.out.println(&quot;v3: &quot; + v3);</span>
+        
+<span class="nc" id="L16">        Moradia m1 = new Moradia(&quot;Rua 25 de Abril&quot;, 90, Moradia.CINZENTO);</span>
+<span class="nc" id="L17">        System.out.println(&quot;m1 :&quot; + m1);</span>
+        
+        //Cores obj;
+        Tributavel obj;
+        
+<span class="nc" id="L22">        obj = v2;</span>
+<span class="nc" id="L23">        System.out.println(&quot;\nObj (v2): &quot; + obj);</span>
+<span class="nc" id="L24">        System.out.println(&quot;Imposto Obj: &quot; + obj.calcularImposto()); // polimorfismo (Tributavel)</span>
+        
+<span class="nc" id="L26">        obj = m1;</span>
+<span class="nc" id="L27">        System.out.println(&quot;Obj (m1): &quot; + obj);</span>
+<span class="nc" id="L28">        System.out.println(&quot;Imposto Obj: &quot; + obj.calcularImposto()); // polimorfismo (Tributavel)</span>
+        
+<span class="nc" id="L30">        System.out.println(&quot;\nImposto v2: &quot; + v2.calcularImposto());</span>
+<span class="nc" id="L31">        System.out.println(&quot;Imposto m1: &quot; + m1.calcularImposto());</span>
+        
+<span class="nc" id="L33">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
