@@ -21,7 +21,7 @@ public class Ciclismo extends Atleta{
     
     @Override
     public double calculoFCM(){
-        return (getGenero()=="masculino" || getGenero()=="m" || getGenero()=="Masculino" || getGenero()=="M") ? 202 -(0.72*getIdade()): 189 - (0.56 * getIdade());
+        return (getGenero().toLowerCase().charAt(0)=='m') ? 202 -(0.72*getIdade()): 189 - (0.56 * getIdade());
     }
     
 }
