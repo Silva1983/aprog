@@ -9,17 +9,17 @@ package com.mycompany.projeto1;
  *
  * @author ssilv
  */
-public class Caminhada extends Atleta{
-    public Caminhada(){
+public class AtletaAmador extends AtletaNaoProfissional{
+    
+    
+    public AtletaAmador (){
         super();
+        
     }
     
-    public Caminhada(String nome, int nIC, String genero, int idade, int fcr){
-        super(nome, nIC, genero, idade, fcr);
+    public AtletaAmador(int antiguidade, int nPremios){
+        super(antiguidade, nPremios);
     }
     
-    @Override
-    public double calculoFCM(){
-        return 208.75 - (0.73 * getIdade());
-    }
+    
 }

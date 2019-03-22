@@ -15,8 +15,8 @@ public class Natacao extends Atleta {
         super();
     }
     
-    public Natacao(String nome, int nIC, String genero, int idade){
-        super(nome, nIC, genero, idade);
+    public Natacao(String nome, int nIC, String genero, int idade, int fcr){
+        super(nome, nIC, genero, idade, fcr);
     }
     
     @Override
