@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Atleta.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">1NB_TP1_1171343_116187</a> &gt; <a href="index.source.html" class="el_package">pt.ipp.isep_1nb_tp1_1171343_1161874</a> &gt; <span class="el_source">Atleta.java</span></div><h1>Atleta.java</h1><pre class="source lang-java linenums">package pt.ipp.isep_1nb_tp1_1171343_1161874;
+
+/**
+ * Esta classe permite a construção de uma hierarquia de classes para
+ * representarem diferentes tipos de atletas. Especifica membros comuns a todas
+ * as classes da hierarquia.
+ *
+ * @author António (1171343) &amp; João (1161874)
+ */
+public abstract class Atleta {
+
+    /**
+     * Nome do atleta
+     */
+    private String nome;
+    /**
+     * Número de identificação civil
+     */
+
+    private int numIdCivil;
+    /**
+     * Género do atleta
+     */
+    private String genero;
+
+    /**
+     * Idade do atleta
+     */
+    private int idade;
+
+    /**
+     * Atividade do atleta
+     */
+    private String atividade;
+
+    private int freqCardRepouso;
+
+    /**
+     * O nome por omissao do atleta
+     */
+    private static final String NOME_POR_OMISSAO = &quot;sem nome&quot;;
+
+    /**
+     * Número de identificação civil por omissão
+     */
+    private static final int NUMIDCIVIL_POR_OMISSAO = 0;
+
+    /**
+     * Género do atleta por omissao
+     */
+    private static final String GENERO_POR_OMISSAO = &quot;sem genero&quot;;
+
+    /**
+     * Idade do atleta por omissão
+     */
+    private static final int IDADE_POR_OMISSAO = 0;
+
+    /**
+     * Atividade do atleta por omissão
+     */
+    private static final String ATIVIDADE_POR_OMISSAO = &quot;sem atividade&quot;;
+
+    /**
+     * Frequência cardíaca do atleta por omissão
+     */
+    private static final int FREQCARDREPOUSO_POR_OMISSAO = 0;
+
+    /**
+     * Valor constante intensidade treino gordura
+     */
+    private static final float INTENSIDADE_TREINO_GORDURA = 0.6f;
+
+    /**
+     * Valor constante intensidade treinio cardiorrespiratorio
+     */
+    private static final float INTENSIDADE_TREINO_CARDIO = 0.75f;
+
+    /**
+     * Inicializa construtor do atleta por omissão
+     */
+<span class="nc" id="L81">    public Atleta() {</span>
+<span class="nc" id="L82">        nome = NOME_POR_OMISSAO;</span>
+<span class="nc" id="L83">        numIdCivil = NUMIDCIVIL_POR_OMISSAO;</span>
+<span class="nc" id="L84">        genero = GENERO_POR_OMISSAO;</span>
+<span class="nc" id="L85">        idade = IDADE_POR_OMISSAO;</span>
+<span class="nc" id="L86">        atividade = ATIVIDADE_POR_OMISSAO;</span>
+<span class="nc" id="L87">        freqCardRepouso = FREQCARDREPOUSO_POR_OMISSAO;</span>
+<span class="nc" id="L88">    }</span>
+
+    /**
+     * Inicializa o construtor atleta com o nome, número de identificação civil,
+     * género, idade, atividade, frequência cardíaca em repouso recebidos
+     *
+     * @param nome - nome do atleta
+     * @param numIdCivil - número de identificação civil do atleta
+     * @param genero - género do atleta
+     * @param idade - idade do atleta
+     * @param atividade - atividade do atleta
+     * @param freqCardRepouso - frequencia cardiaca em repouso do atleta
+     */
+    public Atleta(String nome, int numIdCivil, String genero, int idade,
+<span class="nc" id="L102">            String atividade, int freqCardRepouso) {</span>
+<span class="nc" id="L103">        this.nome = nome;</span>
+<span class="nc" id="L104">        this.numIdCivil = numIdCivil;</span>
+<span class="nc" id="L105">        this.idade = idade;</span>
+<span class="nc" id="L106">        this.genero = genero;</span>
+<span class="nc" id="L107">        this.atividade = atividade;</span>
+<span class="nc" id="L108">        this.freqCardRepouso = freqCardRepouso;</span>
+<span class="nc" id="L109">    }</span>
+
+    /**
+     * Devolve o nome do atleta
+     *
+     * @return nome do atleta
+     */
+    public String getNome() {
+<span class="nc" id="L117">        return nome;</span>
+    }
+
+    /**
+     * Modifica o nome do atleta
+     *
+     * @param nome o novo nome do atleta
+     */
+    public void setNome(String nome) {
+<span class="nc" id="L126">        this.nome = nome;</span>
+<span class="nc" id="L127">    }</span>
+
+    /**
+     * Devolve o número de identificação civil
+     *
+     * @return número de identificação civil
+     */
+    public int getNumIdCivil() {
+<span class="nc" id="L135">        return numIdCivil;</span>
+    }
+
+    /**
+     * Modifica o número de identificação civil
+     *
+     * @param numIdCivil o novo numero de identificação civil
+     */
+    public void setNumIdCivil(int numIdCivil) {
+<span class="nc" id="L144">        this.numIdCivil = numIdCivil;</span>
+<span class="nc" id="L145">    }</span>
+
+    /**
+     * Devolve o género do atleta
+     *
+     * @return género do atleta
+     */
+    public String getGenero() {
+<span class="nc" id="L153">        return genero;</span>
+    }
+
+    /**
+     * Modifica o género do atleta
+     *
+     * @param genero o novo género do atleta
+     */
+    public void setGenero(String genero) {
+<span class="nc" id="L162">        this.genero = genero;</span>
+<span class="nc" id="L163">    }</span>
+
+    /**
+     * Devolve idade do atleta
+     *
+     * @return idade do atleta
+     */
+    public int getIdade() {
+<span class="nc" id="L171">        return idade;</span>
+    }
+
+    /**
+     * Modifica idade do atleta
+     *
+     * @param idade nova idade do atleta
+     */
+    public void setIdade(int idade) {
+<span class="nc" id="L180">        this.idade = idade;</span>
+<span class="nc" id="L181">    }</span>
+
+    /**
+     * Devolve atividade do atleta
+     *
+     * @return atividade do atleta
+     */
+    public String getAtividade() {
+<span class="nc" id="L189">        return atividade;</span>
+    }
+
+    /**
+     * Modifica a atividade do atleta
+     *
+     * @param atividade nova atividade do atleta
+     */
+    public void setAtividade(String atividade) {
+<span class="nc" id="L198">        this.atividade = atividade;</span>
+<span class="nc" id="L199">    }</span>
+
+    /**
+     * Devolve frequência cardíaca em repouso
+     *
+     * @return frequência cardíaca em repouso
+     */
+    public int getFreqCardRepouso() {
+<span class="nc" id="L207">        return freqCardRepouso;</span>
+    }
+
+    /**
+     * Modifica a frequência cardíaca em repouso
+     *
+     * @param freqCardRepouso nova frequência cardíaca em repouso
+     */
+    public void setFreqCardRepouso(int freqCardRepouso) {
+<span class="nc" id="L216">        this.freqCardRepouso = freqCardRepouso;</span>
+<span class="nc" id="L217">    }</span>
+
+    /**
+     * Permite o cálculo da Frequência Cardíaca de Trabalho quando o objetivo é
+     * a queima de gordura
+     *
+     * @return frequência cardíaca de trabalho
+     */
+    public static float getIntesidadeTreinoGordura() {
+<span class="nc" id="L226">        return INTENSIDADE_TREINO_GORDURA;</span>
+    }
+
+    /**
+     * Permite o cálculo da Frequência Cardíaca de Trabalho quando o objetivo é
+     * trabalhar a capacidade cardiorrespiratória
+     *
+     * @return frequência cardíaca de trabalho
+     */
+    public static float getIntesidadeTreinoCardio() {
+<span class="nc" id="L236">        return INTENSIDADE_TREINO_CARDIO;</span>
+    }
+
+    /**
+     * Permite o cálculo da frequência cardíaca máxima
+     *
+     * @return calculo da frequência máxima
+     */
+    public float calcularFreqCardMax() {
+
+<span class="nc bnc" id="L246" title="All 4 branches missed.">        if ((atividade.equalsIgnoreCase(&quot;caminhada&quot;) || atividade.equalsIgnoreCase(&quot;corrida&quot;))</span>
+<span class="nc bnc" id="L247" title="All 4 branches missed.">                &amp;&amp; (genero.equalsIgnoreCase(&quot;masculino&quot;) || genero.equalsIgnoreCase(&quot;feminino&quot;))) {</span>
+<span class="nc" id="L248">            return (float) (208.75 - (0.73 * idade));</span>
+<span class="nc bnc" id="L249" title="All 2 branches missed.">        } else if (this.atividade.equalsIgnoreCase(&quot;natação&quot;)) {</span>
+<span class="nc" id="L250">            return (float) (204 - (1.7 * idade));</span>
+<span class="nc bnc" id="L251" title="All 4 branches missed.">        } else if (atividade.equalsIgnoreCase(&quot;ciclismo&quot;) &amp;&amp; genero.toLowerCase().charAt(0) == 'm') {</span>
+<span class="nc" id="L252">            return (float) (202 - (0.72 * idade));</span>
+<span class="nc bnc" id="L253" title="All 4 branches missed.">        } else if (atividade.equalsIgnoreCase(&quot;ciclismo&quot;) &amp;&amp; genero.toLowerCase().charAt(0) == 'f') {</span>
+<span class="nc" id="L254">            return (float) (189 - (0.56 * idade));</span>
+        } else {
+<span class="nc" id="L256">            return 0;</span>
+        }
+    }
+
+    /**
+     * Devolve o nome, número de identificação civil, género, idade do atleta,
+     * atividade associada, frequência cardíaca em repouso
+     *
+     * @return nome, número de identificação civil, género, idade do atleta,
+     * atividade, freqCardRepouso
+     */
+    @Override
+    public String toString() {
+<span class="nc" id="L269">        return String.format(&quot;Nome: %s%nNº Id. Civil: %d%nGénero: %s%nIdade: %d%nAtividade: %s%nFCR: %d%n&quot;,</span>
+<span class="nc" id="L270">                nome, numIdCivil, genero, idade, atividade, freqCardRepouso);</span>
+    }
+
+    /**
+     * Permite o cálculo da Frequência Cardíaca Trabalho queima de gordura
+     * através de polimorfismo
+     *
+     * @return Frequência Cardíaca Trabalho queima de gordura
+     */
+    public abstract float calcularFreqCardTrabGordura();
+
+    /**
+     * Permite o cálculo da Frequência Cardíaca Trabalho cardiorrespiratória
+     * através de polimorfismo
+     *
+     * @return Frequência Cardíaca Trabalho cardiorrespiratória
+     */
+    public abstract float calcularFreqCardTrabCardio();
+
+    /**
+     * Permite o cálculo do valor mensal que cada atleta recebe através de
+     * polimorfismo
+     *
+     * @return cálculo do valor mensal
+     */
+    public abstract float calcularValorMensal();
+
+    /**
+     * Devolve o nome, frequência cardíaca máxima e frequência cardíaca de
+     * trabalho (objetivo de queimar gordura e de trabalhar a capacidade
+     * cardiorrespiratória)
+     *
+     * @return nome, calcularFreqCardTrabGordura, calcularFreqCardTrabCardio,
+     * calcularFreqCardMAx
+     */
+    public String toStringLista1() {
+<span class="nc" id="L306">        return String.format(&quot;Nome: %s%nFCM: %.2f%nFCT(gordura): %.2f%nFCT(cardio): %.2f%n&quot;,</span>
+<span class="nc" id="L307">                nome, calcularFreqCardMax(), calcularFreqCardTrabGordura(), calcularFreqCardTrabCardio());</span>
+    }
+
+    /**
+     * Devolve o nome e o valor mensal a pagar ao atleta
+     *
+     * @return nome, calcularValorMensal
+     */
+    public String toStringLista2() {
+<span class="nc" id="L316">        return String.format(&quot;Nome: %s%nValor Mensal a Pagar: %.2f%n&quot;,</span>
+<span class="nc" id="L317">                nome, calcularValorMensal());</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

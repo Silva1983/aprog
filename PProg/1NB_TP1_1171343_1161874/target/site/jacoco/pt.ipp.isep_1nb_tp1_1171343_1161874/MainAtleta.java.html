@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MainAtleta.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">1NB_TP1_1171343_116187</a> &gt; <a href="index.source.html" class="el_package">pt.ipp.isep_1nb_tp1_1171343_1161874</a> &gt; <span class="el_source">MainAtleta.java</span></div><h1>MainAtleta.java</h1><pre class="source lang-java linenums">package pt.ipp.isep_1nb_tp1_1171343_1161874;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ *
+ * @author António (1171343) &amp; João (1161874)
+ */
+<span class="nc" id="L10">public class MainAtleta {</span>
+
+    public static void main(String[] args) {
+
+<<<<<<< HEAD
+<span class="nc" id="L14">        Atleta ap1 = new AtletaProfissional(&quot;João Pimentel&quot;, 14785289, &quot;masculino&quot;, 34, &quot;ciclismo&quot;, 60, 100, 250);</span>
+<span class="nc" id="L15">        Atleta ap2 = new AtletaProfissional(&quot;Juliana Rangel&quot;, 15236847, &quot;feminino&quot;, 34, &quot;natação&quot;, 70, 150, 500);</span>
+<span class="nc" id="L16">        Atleta asp1 = new AtletaSemiProfissional(&quot;António Silva&quot;, 25486319, &quot;masculino&quot;, 36, &quot;caminhada&quot;, 75, 25);</span>
+<span class="nc" id="L17">        Atleta asp2 = new AtletaSemiProfissional(&quot;Sara Gomes&quot;, 23654782, &quot;feminino&quot;, 36, &quot;ciclismo&quot;, 80, 15);</span>
+<span class="nc" id="L18">        Atleta asp3 = new AtletaSemiProfissional(&quot;Maria Martins&quot;, 23654781, &quot;feminino&quot;, 25, &quot;corrida&quot;, 60, 5);</span>
+<span class="nc" id="L19">        Atleta aa1 = new AtletaAmador(&quot;Miguel Sousa&quot;, 12365489, &quot;masculino&quot;, 27, &quot;corrida&quot;, 70, 10, 200);</span>
+<span class="nc" id="L20">        Atleta aa2 = new AtletaAmador(&quot;Pedro Pereira&quot;, 23145678, &quot;masculino&quot;, 40, &quot;caminhada&quot;, 75, 20, 100);</span>
+
+<span class="nc" id="L22">        List&lt;Atleta&gt; atletas = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L23">        atletas.add(ap1);</span>
+<span class="nc" id="L24">        atletas.add(ap2);</span>
+<span class="nc" id="L25">        atletas.add(asp1);</span>
+<span class="nc" id="L26">        atletas.add(asp2);</span>
+<span class="nc" id="L27">        atletas.add(asp3);</span>
+<span class="nc" id="L28">        atletas.add(aa1);</span>
+<span class="nc" id="L29">        atletas.add(aa2);</span>
+
+//        System.out.println(&quot;### Listagem Completa Atletas ###&quot;);
+//        listarForEach(atletas);
+<span class="nc" id="L33">        System.out.println(&quot;### Listagem FCM e FCT (atletas amadores e semiprofissionais) ###&quot;);</span>
+<span class="nc" id="L34">        listaUm(atletas);</span>
+<span class="nc" id="L35">        System.out.println(&quot;### Listagem Completa de Valores a Pagar ###&quot;);</span>
+<span class="nc" id="L36">        listaDois(atletas);</span>
+        
+        
+<span class="nc" id="L39">        System.out.println(&quot;Quantidade de Atletas Amadores&quot;);</span>
+<span class="nc" id="L40">        System.out.println();</span>
+<span class="nc" id="L41">        System.out.println(&quot;Quantidade de Atletas Profissionais&quot;);</span>
+<span class="nc" id="L42">        System.out.println();</span>
+
+<span class="nc" id="L44">        System.out.println(Atleta.getIntesidadeTreinoCardio());</span>
+        
+<span class="nc" id="L46">        System.out.println(&quot;### Listagem Atletas ###&quot;);</span>
+<span class="nc" id="L47">        listarForEach(atletas);</span>
+        
+<span class="nc" id="L49">    }</span>
+
+    private static void listarForEach(List&lt;Atleta&gt; lista) {
+<span class="nc bnc" id="L52" title="All 2 branches missed.">        for (Atleta atletas : lista) {</span>
+<span class="nc" id="L53">            System.out.printf(atletas.toString());</span>
+<span class="nc" id="L54">        }</span>
+<span class="nc" id="L55">    }</span>
+
+    public static void listaUm(List&lt;Atleta&gt; lista) {
+<span class="nc bnc" id="L58" title="All 2 branches missed.">        for (int i = 0; i &lt; lista.size(); i++) {</span>
+<span class="nc" id="L59">            Atleta atleta = lista.get(i);</span>
+<span class="nc bnc" id="L60" title="All 4 branches missed.">            if (atleta instanceof AtletaSemiProfissional || atleta instanceof AtletaAmador) {</span>
+<span class="nc" id="L61">                System.out.println(atleta.toStringLista1());</span>
+            }
+        }
+<span class="nc" id="L64">    }</span>
+
+    public static void listaDois(List&lt;Atleta&gt; lista) {
+<span class="nc bnc" id="L67" title="All 2 branches missed.">        for (int i = 0; i &lt; lista.size(); i++) {</span>
+<span class="nc" id="L68">            System.out.println(lista.get(i).toStringLista2());</span>
+        }
+<span class="nc" id="L70">    }</span>
+=======
+        /**
+         * a)
+         */
+<span class="nc" id="L17">        Atleta ap1 = new AtletaProfissional(&quot;João Pimentel&quot;, 14785289, &quot;masculino&quot;, 34, &quot;ciclismo&quot;, 60, 100, 250);</span>
+<span class="nc" id="L18">        Atleta ap2 = new AtletaProfissional(&quot;Juliana Rangel&quot;, 15236847, &quot;feminino&quot;, 34, &quot;natação&quot;, 70, 150, 500);</span>
+<span class="nc" id="L19">        Atleta asp1 = new AtletaSemiProfissional(&quot;António Silva&quot;, 25486319, &quot;masculino&quot;, 36, &quot;caminhada&quot;, 75, 25);</span>
+<span class="nc" id="L20">        Atleta asp2 = new AtletaSemiProfissional(&quot;Sara Gomes&quot;, 23654782, &quot;feminino&quot;, 36, &quot;ciclismo&quot;, 80, 15);</span>
+<span class="nc" id="L21">        Atleta asp3 = new AtletaSemiProfissional(&quot;Maria Martins&quot;, 23654781, &quot;feminino&quot;, 25, &quot;corrida&quot;, 60, 5);</span>
+<span class="nc" id="L22">        Atleta aa1 = new AtletaAmador(&quot;Miguel Sousa&quot;, 12365489, &quot;masculino&quot;, 27, &quot;corrida&quot;, 70, 10, 200);</span>
+<span class="nc" id="L23">        Atleta aa2 = new AtletaAmador(&quot;Pedro Pereira&quot;, 23145678, &quot;masculino&quot;, 40, &quot;caminhada&quot;, 75, 20, 100);</span>
+
+        /**
+         * b)
+         */
+<span class="nc" id="L28">        List&lt;Atleta&gt; atletas = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L29">        atletas.add(ap1);</span>
+<span class="nc" id="L30">        atletas.add(ap2);</span>
+<span class="nc" id="L31">        atletas.add(asp1);</span>
+<span class="nc" id="L32">        atletas.add(asp2);</span>
+<span class="nc" id="L33">        atletas.add(asp3);</span>
+<span class="nc" id="L34">        atletas.add(aa1);</span>
+<span class="nc" id="L35">        atletas.add(aa2);</span>
+
+        /**
+         * c)
+         */
+<span class="nc" id="L40">        System.out.println(&quot;### Listagem FCM e FCT (atletas amadores e semiprofissionais) ###&quot;);</span>
+<span class="nc" id="L41">        listaUm(atletas);</span>
+<span class="nc" id="L42">        System.out.println(&quot;### Listagem Completa de Valores a Pagar ###&quot;);</span>
+<span class="nc" id="L43">        listaDois(atletas);</span>
+
+        /**
+         * d)
+         */
+<span class="nc" id="L48">        System.out.println(&quot;Quantidade de Atletas Amadores: &quot; + AtletaAmador.getContadorAtletaAmador());</span>
+<span class="nc" id="L49">        System.out.println(&quot;Quantidade de Atletas Profissionais: &quot; + AtletaProfissional.getcontadorAtletaProfissional());</span>
+
+        /**
+         * e)
+         */
+<span class="nc" id="L54">        System.out.println(&quot;### Total a Pagar ###&quot;);</span>
+<span class="nc" id="L55">        System.out.println(valorTotalPagar(atletas));</span>
+
+//        System.out.println(&quot;### Listagem Completa Atletas ###&quot;);
+//        listarForEach(atletas);
+<span class="nc" id="L59">    }</span>
+
+    /**
+     * listagem de todos os atletas e suas características
+     *
+     * @param lista - ArrayList
+     */
+    private static void listarForEach(List&lt;Atleta&gt; lista) {
+<span class="nc bnc" id="L67" title="All 2 branches missed.">        for (Atleta atletas : lista) {</span>
+<span class="nc" id="L68">            System.out.printf(atletas.toString());</span>
+<span class="nc" id="L69">        }</span>
+<span class="nc" id="L70">    }</span>
+
+    /**
+     * listagem (com o nome, o FCM e os FCT's) de todos os atletas
+     * semiprofissionais e amadores
+     *
+     * @param lista - ArrayList
+     */
+    private static void listaUm(List&lt;Atleta&gt; lista) {
+<span class="nc bnc" id="L79" title="All 2 branches missed.">        for (int i = 0; i &lt; lista.size(); i++) {</span>
+<span class="nc bnc" id="L80" title="All 4 branches missed.">            if (lista.get(i) instanceof AtletaSemiProfissional || lista.get(i) instanceof AtletaAmador) {</span>
+<span class="nc" id="L81">                System.out.println(lista.get(i).toStringLista1());</span>
+            }
+        }
+<span class="nc" id="L84">    }</span>
+
+    /**
+     * listagem de todos os atletas com o nome e o valor mensal a pagar a cada
+     * um
+     *
+     * @param lista - ArrayList
+     */
+    private static void listaDois(List&lt;Atleta&gt; lista) {
+<span class="nc bnc" id="L93" title="All 2 branches missed.">        for (int i = 0; i &lt; lista.size(); i++) {</span>
+<span class="nc" id="L94">            System.out.println(lista.get(i).toStringLista2());</span>
+        }
+<span class="nc" id="L96">    }</span>
+
+    /**
+     * listagem com o valor total a pagar por cada tipo de atleta e o valor total a
+     * pagar a todos os atletas
+     *
+     * @param lista - ArrayList
+     */
+    private static String valorTotalPagar(List&lt;Atleta&gt; lista) {
+<span class="nc" id="L105">        float totalProfissional = 0;</span>
+<span class="nc" id="L106">        float totalSemiProfissional = 0;</span>
+<span class="nc" id="L107">        float totalAmador = 0;</span>
+<span class="nc" id="L108">        float totalGeral = 0;</span>
+
+<span class="nc bnc" id="L110" title="All 2 branches missed.">        for (int i = 0; i &lt; lista.size(); i++) {</span>
+<span class="nc bnc" id="L111" title="All 2 branches missed.">            if (lista.get(i) instanceof AtletaProfissional) {</span>
+<span class="nc" id="L112">                totalProfissional = (float) totalProfissional + lista.get(i).calcularValorMensal();</span>
+<span class="nc" id="L113">                totalGeral = totalGeral + lista.get(i).calcularValorMensal();</span>
+<span class="nc bnc" id="L114" title="All 4 branches missed.">            } else if (lista.get(i) instanceof AtletaSemiProfissional &amp;&amp; !(lista.get(i) instanceof AtletaAmador)) {</span>
+<span class="nc" id="L115">                totalSemiProfissional = (float) totalSemiProfissional + lista.get(i).calcularValorMensal();</span>
+<span class="nc" id="L116">                totalGeral = totalGeral + lista.get(i).calcularValorMensal();</span>
+            } else {
+<span class="nc" id="L118">                totalAmador = (float) totalAmador + lista.get(i).calcularValorMensal();</span>
+<span class="nc" id="L119">                totalGeral = totalGeral + lista.get(i).calcularValorMensal();</span>
+            }
+        }
+
+<span class="nc" id="L123">        return String.format(&quot;Total Atletas Profissionais: %.2f%nTotal Atletas Semiprofissionais: %.2f%n&quot;</span>
+                + &quot;Total Atletas Amadores: %.2f%nTotal Geral: %.2f%n&quot;,
+<span class="nc" id="L125">                totalProfissional, totalSemiProfissional, totalAmador, totalGeral);</span>
+    }
+>>>>>>> 2ae98601e94e4d04dbc402cd41850ae311bada65
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
