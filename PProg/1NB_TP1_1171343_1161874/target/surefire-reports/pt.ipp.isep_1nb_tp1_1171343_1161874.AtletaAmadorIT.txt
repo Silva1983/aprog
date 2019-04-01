@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: pt.ipp.isep_1nb_tp1_1171343_1161874.AtletaAmadorIT
--------------------------------------------------------------------------------
-<<<<<<< HEAD:1NB_TP1_1171343_1161874/target/surefire-reports/pt.ipp.isep_1nb_tp1_1171343_1161874.AtletaAmadorIT.txt
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 sec
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 sec
->>>>>>> 2ae98601e94e4d04dbc402cd41850ae311bada65:1NB_TP1_1171343_1161874/target/surefire-reports/pt.ipp.isep_1nb_tp1_1171343_1161874.AtletaAmadorIT.txt
